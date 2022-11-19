@@ -1,3 +1,6 @@
 fastapi == 0.87.0
 uvicorn == 0.19.0
 motor == 3.1.1
+numpy == 1.23.4
+pandas == 1.5.0
+fastai == 2.7.10
