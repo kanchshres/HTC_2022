@@ -9,7 +9,7 @@ function HeroSection() {
         <div className='hero-container'>
             <video src={video2} autoPlay loop muted />
             <h1>Vert</h1>
-            <p>from one hand, to another</p>
+            <p>from one hand to another</p>
             &nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;
         </div>
