@@ -4,6 +4,10 @@ import Header from './Header';
 
 import LoginPage from '../pages/login';
 import HomePage from '../pages/home';
+import ViewProduct from '../pages/view_product';
+import LocationPage from '../pages/location';
+import PostPage from '../pages/post';
+import SignUp from '../pages/signup';
 
 
 function App() {
@@ -12,7 +16,12 @@ function App() {
     <Header />
     <Routes>
       <Route exact path="/" element={<HomePage/>}/>
+      <Route path="/location" element={<LocationPage/>}/>
       <Route path="/login" element={<LoginPage/>}/>
+      <Route path="/view" element={<ViewProduct/>}/>
+      <Route path="/post" element={<PostPage/>}/>
+      <Route path="/signup" element={<SignUp/>}/>
+
     </Routes>
 
     </Router>
