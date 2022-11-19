@@ -1,6 +1,5 @@
 import React from 'react'
 import blazer from "../assets/blazer.png";
-import './cards.css';
 
 const ViewProduct = () => {
   return (
