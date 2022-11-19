@@ -2,7 +2,6 @@ import React from "react";
 import {Link} from "react-router-dom"
 import {AppBar, Toolbar, Typography,Stack,Button} from "@mui/material";
 
-
 const Header = () =>{
     return(
         <AppBar position='static' style={{ background: '#73B87A' }}>

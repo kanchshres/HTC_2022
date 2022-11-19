@@ -8,21 +8,18 @@ import LocationPage from '../pages/Location';
 import PostPage from '../pages/Post';
 import SignUp from '../pages/Signup';
 
-
 function App() {
   return (
-    <Router>
+    <Router forceRefresh={true}>
     <Header />
-    <Routes>
-      <Route exact path="/" element={<HomePage/>}/>
-      <Route path="/location" element={<LocationPage/>}/>
-      <Route path="/login" element={<LoginPage/>}/>
-      <Route path="/view" element={<ViewProduct/>}/>
-      <Route path="/post" element={<PostPage/>}/>
-      <Route path="/signup" element={<SignUp/>}/>
-
-    </Routes>
-
+      <Routes>
+        <Route exact path="/" element={<HomePage/>}/>
+        <Route path="/location" element={<LocationPage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/view" element={<ViewProduct/>}/>
+        <Route path="/post" element={<PostPage/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
+      </Routes>
     </Router>
   )
 }
