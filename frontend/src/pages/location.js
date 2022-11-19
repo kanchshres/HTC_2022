@@ -1,9 +1,12 @@
 import React from 'react'
+import { useMemo } from "react";
+import { GoogleMap, useLoadScript, Marker } from 'google-maps-react';
 
 const LocationPage = () => {
+  const {} = useLoadScript({googleMapsApiKey})
   return (
     <div>
-        <p>Here is our Locations Page</p>
+        <p>Map Page POGGERs</p>
     </div>
   )
 }
