@@ -12,22 +12,22 @@ const Header = () =>{
                 </Typography>
                 <Stack direction='row' spacing={4}>
                     <Link to = "/" style={{ color: '#FFF' }}>
-                        <Button color='inherit'>Home</Button>
+                        <Button style={{ fontSize: '18px' }} color='inherit'>Home</Button>
                     </Link>
                     <Link to = "/location" style={{ color: '#FFF' }}>
-                        <Button color='inherit'>Location</Button>
+                        <Button style={{ fontSize: '18px' }} color='inherit'>Location</Button>
                     </Link>
                     <Link to ="/view" style={{ color: '#FFF' }}>
-                        <Button color='inherit'>View</Button>
+                        <Button style={{ fontSize: '18px' }} color='inherit'>View</Button>
                     </Link>
                     <Link to = "/post" style={{ color: '#FFF' }}>
-                        <Button color='inherit'>Post</Button>
+                        <Button style={{ fontSize: '18px' }} color='inherit'>Post</Button>
                     </Link>
                     <Link to ="/login" style={{ color: '#FFF' }}>
-                        <Button color='inherit'>Login</Button>
+                        <Button style={{ fontSize: '18px' }} color='inherit'>Login</Button>
                     </Link>
                     <Link to ="/signup" style={{ color: '#FFF' }}>
-                        <Button color='inherit'>Signup</Button>
+                        <Button style={{ fontSize: '18px' }} color='inherit'>Signup</Button>
                     </Link>
                 </Stack>
             </Toolbar>
