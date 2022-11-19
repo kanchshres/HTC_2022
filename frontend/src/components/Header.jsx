@@ -1,5 +1,5 @@
 import React from "react";
-import { Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 import {AppBar, Toolbar, Typography,Stack,Button} from "@mui/material";
 
 
@@ -11,22 +11,22 @@ const Header = () =>{
                     Vert
                 </Typography>
                 <Stack direction='row' spacing={4}>
-                    <Link to = "/">
+                    <Link to = "/" style={{ color: '#FFF' }}>
                         <Button color='inherit'>Home</Button>
                     </Link>
-                    <Link to = "/location">
+                    <Link to = "/location" style={{ color: '#FFF' }}>
                         <Button color='inherit'>Location</Button>
                     </Link>
-                    <Link to ="/view">
+                    <Link to ="/view" style={{ color: '#FFF' }}>
                         <Button color='inherit'>View</Button>
                     </Link>
-                    <Link to = "/post">
+                    <Link to = "/post" style={{ color: '#FFF' }}>
                         <Button color='inherit'>Post</Button>
                     </Link>
-                    <Link to ="/login">
+                    <Link to ="/login" style={{ color: '#FFF' }}>
                         <Button color='inherit'>Login</Button>
                     </Link>
-                    <Link to ="/signup">
+                    <Link to ="/signup" style={{ color: '#FFF' }}>
                         <Button color='inherit'>Signup</Button>
                     </Link>
                 </Stack>
