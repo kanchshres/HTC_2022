@@ -1,5 +1,5 @@
 import React from "react";
-import { Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 import {AppBar, Toolbar, Typography,Stack,Button} from "@mui/material";
 
 
@@ -11,23 +11,23 @@ const Header = () =>{
                     Vert
                 </Typography>
                 <Stack direction='row' spacing={4}>
-                    <Link to = "/">
-                        <Button color='inherit'>Home</Button>
+                    <Link to = "/" style={{ color: '#FFF' }}>
+                        <Button style={{ fontSize: '18px' }} color='inherit'>Home</Button>
                     </Link>
-                    <Link to = "/location">
-                        <Button color='inherit'>Location</Button>
+                    <Link to = "/location" style={{ color: '#FFF' }}>
+                        <Button style={{ fontSize: '18px' }} color='inherit'>Location</Button>
                     </Link>
-                    <Link to ="/view">
-                        <Button color='inherit'>View</Button>
+                    <Link to ="/view" style={{ color: '#FFF' }}>
+                        <Button style={{ fontSize: '18px' }} color='inherit'>View</Button>
                     </Link>
-                    <Link to = "/post">
-                        <Button color='inherit'>Post</Button>
+                    <Link to = "/post" style={{ color: '#FFF' }}>
+                        <Button style={{ fontSize: '18px' }} color='inherit'>Post</Button>
                     </Link>
-                    <Link to ="/login">
-                        <Button color='inherit'>Login</Button>
+                    <Link to ="/login" style={{ color: '#FFF' }}>
+                        <Button style={{ fontSize: '18px' }} color='inherit'>Login</Button>
                     </Link>
-                    <Link to ="/signup">
-                        <Button color='inherit'>Signup</Button>
+                    <Link to ="/signup" style={{ color: '#FFF' }}>
+                        <Button style={{ fontSize: '18px' }} color='inherit'>Signup</Button>
                     </Link>
                 </Stack>
             </Toolbar>

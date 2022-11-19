@@ -1,13 +1,12 @@
 import React from 'react';
 import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import Header from './Header';
-
-import LoginPage from '../pages/login';
-import HomePage from '../pages/home';
-import ViewProduct from '../pages/view_product';
-import LocationPage from '../pages/location';
-import PostPage from '../pages/post';
-import SignUp from '../pages/signup';
+import LoginPage from '../pages/Login';
+import HomePage from '../pages/Home';
+import ViewProduct from '../pages/View_product';
+import LocationPage from '../pages/Location';
+import PostPage from '../pages/Post';
+import SignUp from '../pages/Signup';
 
 
 function App() {
