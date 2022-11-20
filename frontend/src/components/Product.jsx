@@ -17,10 +17,10 @@ const Product = () => {
 
       />
         <CardContent>
-          <Typography gutterBottom variant='h5' component='div'>
+          <Typography gutterBottom variant='h5' component='div' style={{ fontSize: '20px' ,fontFamily: 'GFS Didot'}}>
             Vintage Coat
           </Typography>
-          <Typography variant='body2' color='text.secondary'>
+          <Typography variant='body2' color='text.secondary' style={{ fontSize: '20px' ,fontFamily: 'GFS Didot'}}>
 
             Posted 2022/11/19
 
@@ -30,10 +30,10 @@ const Product = () => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size='small'>View More</Button>
+          <Button size='small' style={{ fontSize: '20px' ,fontFamily: 'GFS Didot'}}>View</Button>
 
           <Link to ="/report" style={{ color: '#FFF', textDecoration: 'none' }}>
-                        <Button size="small">Report Product</Button>
+                        <Button size="small" style={{ fontSize: '20px' ,fontFamily: 'GFS Didot'}}>Report</Button>
           </Link>
         </CardActions>
       </Card>
