@@ -31,13 +31,12 @@ const Add = () => {
 
     return(
     <div className="add"> 
-      <Typography gutterBottom variant="h4" align="center" >
+      <Typography component="h1" variant="h5" align="center" >
         Submit your article of clothing!     
     </Typography>
       <Grid>
         <Card style={{ maxWidth: 450, padding: "20px 5px", margin: "0 auto" }}>
           <CardContent>
-            
             <form>
               <Grid container spacing={1}>
                 <Grid xs={12}  item>

@@ -11,19 +11,19 @@ const Header = () =>{
                 </Typography>
                 <Stack direction='row' spacing={4}>
                     <Link to = "/" style={{ color: '#FFF', textDecoration: 'none' }}>
-                        <Button style={{ fontSize: '20px' ,fontFamily: 'GFS Didot'}} color='inherit'>Home</Button>
+                        <Button style={{ fontSize: '20px' ,fontFamily: 'Trebuchet MS'}} color='inherit'>Home</Button>
                     </Link>
                     <Link to = "/location" style={{ color: '#FFF', textDecoration: 'none' }}>
-                        <Button style={{ fontSize: '20px',fontFamily: 'GFS Didot' }} color='inherit'>Location</Button>
+                        <Button style={{ fontSize: '20px',fontFamily: 'Trebuchet MS' }} color='inherit'>Location</Button>
                     </Link>
                     <Link to ="/view" style={{ color: '#FFF', textDecoration: 'none' }}>
-                        <Button style={{ fontSize: '20px',fontFamily: 'GFS Didot' }} color='inherit'>View</Button>
+                        <Button style={{ fontSize: '20px',fontFamily: 'Trebuchet MS' }} color='inherit'>View</Button>
                     </Link>
                     <Link to = "/post" style={{ color: '#FFF', textDecoration: 'none' }}>
-                        <Button style={{ fontSize: '20px',fontFamily: 'GFS Didot' }} color='inherit'>Post</Button>
+                        <Button style={{ fontSize: '20px',fontFamily: 'Trebuchet MS'}} color='inherit'>Post</Button>
                     </Link>
                     <Link to ="/login" style={{ color: '#FFF', textDecoration: 'none' }}>
-                        <Button style={{ fontSize: '20px',fontFamily: 'GFS Didot' }} color='inherit'>Get Started</Button>
+                        <Button style={{ fontSize: '20px',fontFamily: 'Trebuchet MS'}} color='inherit'>Get Started</Button>
                     </Link>
                 </Stack>
             </Toolbar>
