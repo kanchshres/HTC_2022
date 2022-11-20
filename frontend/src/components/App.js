@@ -12,16 +12,14 @@ function App() {
   return (
     <Router forceRefresh={true}>
     <Header />
-    <Routes>
-      <Route exact path="/" element={<HomePage/>}/>
-      <Route path="/location" element={<LocationPage/>}/>
-      <Route path="/login" element={<LoginPage/>}/>
-      <Route path="/view" element={<View/>}/>
-      <Route path="/post" element={<PostPage/>}/>
-      <Route path="/signup" element={<SignUp/>}/>
-
-    </Routes>
-
+      <Routes>
+        <Route exact path="/" element={<HomePage/>}/>
+        <Route path="/location" element={<LocationPage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/view" element={<View/>}/>
+        <Route path="/post" element={<PostPage/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
+      </Routes>
     </Router>
   )
 }
