@@ -7,9 +7,3 @@ class User(BaseModel):
     password: str
     home_address: str
     listings: list[int]
-
-class Listing(BaseModel):
-    title: str
-    description: str
-    value: float
-    category: str

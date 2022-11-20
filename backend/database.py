@@ -23,6 +23,7 @@ async def create_user(user):
     result = await collection.insert_one(document)
     return result
 
+# need to fix line 28
 async def update_user(username, email, password, home_address):
     await collection.update_one({"username": username}, {"$set": {"email":email}})
     document = await collection.find_one({"username":username})
