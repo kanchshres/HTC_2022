@@ -38,8 +38,6 @@ const Add = ({handleItem, id, setErrorMessage}) => {
                   onChange={(e) => {
                     setForm({...form, title: e.target.value});
                   }}
-                  
-                  
                    />
                 </Grid>
 
