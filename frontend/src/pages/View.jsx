@@ -6,6 +6,14 @@ import Paper from '@mui/material/Paper';
  import GridLayout from "react-grid-layout";
  import product2 from '../components/product2'
  import blazer from "../assets/blazer.png";
+ import blouse from "../assets/blouse.png";
+ import cap from "../assets/cap.png";
+ import dress from "../assets/hoodie.png"
+ import long_sleeve from "../assets/long_sleeve.png";
+ import outerwear from "../assets/outerwear.png";
+
+
+ 
 
 
 
@@ -16,6 +24,16 @@ const View = () => {
             
             <Product
               picture = {blazer}
+            />
+
+<Product
+              picture = {cap}
+            />
+
+
+
+            <Product
+              picture = {blouse}
             />
             
 
