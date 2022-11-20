@@ -13,8 +13,11 @@ const Header = () =>{
                     <Link to = "/" style={{ color: '#FFF', textDecoration: 'none' }}>
                         <Button style={{ fontSize: '20px' ,fontFamily: 'Trebuchet MS'}} color='inherit'>Home</Button>
                     </Link>
+                    {/* <Link to ="/about" style={{ color: '#FFF', textDecoration: 'none' }}>
+                        <Button style={{ fontSize: '20px',fontFamily: 'Trebuchet MS'}} color='inherit'>About Us</Button>
+                    </Link> */}
                     <Link to = "/location" style={{ color: '#FFF', textDecoration: 'none' }}>
-                        <Button style={{ fontSize: '20px',fontFamily: 'Trebuchet MS' }} color='inherit'>Location</Button>
+                        <Button style={{ fontSize: '20px',fontFamily: 'Trebuchet MS' }} color='inherit' onClick="history.go(0)" >Location</Button>
                     </Link>
                     <Link to ="/view" style={{ color: '#FFF', textDecoration: 'none' }}>
                         <Button style={{ fontSize: '20px',fontFamily: 'Trebuchet MS' }} color='inherit'>View</Button>
