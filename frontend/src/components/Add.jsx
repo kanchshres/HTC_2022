@@ -27,7 +27,7 @@ const Add = () => {
 
     return(
     <div className="add"> 
-      <Typography gutterBottom variant="h4" align="center">
+      <Typography gutterBottom variant="h4" align="center" style={{ fontSize: '35px' ,fontFamily: 'GFS Didot'}}>
         Submit your article of clothing!     
     </Typography>
       <Grid>
@@ -37,7 +37,7 @@ const Add = () => {
             <form>
               <Grid container spacing={1}>
                 <Grid xs={12}  item>
-                  <TextField placeholder="Clothing Item" label="Name of Clothing Item" variant="outlined" fullWidth required
+                  <TextField placeholder="Clothing Item" style={{ fontSize: '18px' ,fontFamily: 'GFS Didot'}} label="Name of Clothing Item" variant="outlined" fullWidth required
                   onChange={(e) => {
                     setForm({...form, nameCloth: e.target.value});
                   }}
@@ -46,7 +46,7 @@ const Add = () => {
                    />
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField  placeholder="Value" label="Approximate Value" variant="outlined" fullWidth required 
+                  <TextField  placeholder="Value" style={{ fontSize: '18px' ,fontFamily: 'GFS Didot'}} label="Approximate Value" variant="outlined" fullWidth required 
                     onChange={(e) => {
                     setForm({...form, category: e.target.value});
                   }}
@@ -55,14 +55,14 @@ const Add = () => {
                   />
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField  placeholder="Name" label="Name" variant="outlined" fullWidth required 
+                  <TextField  placeholder="Name" style={{ fontSize: '18px' ,fontFamily: 'GFS Didot'}} label="Name" variant="outlined" fullWidth required 
 
                     onChange={(e) => {
                     setForm({...form, category: e.name.value});
                     }}
                   />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} >
                   <TextField label="Message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required 
                     onChange={(e) => {
                     setForm({...form, category: e.name.value});
@@ -72,14 +72,14 @@ const Add = () => {
                   />
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography>Upload Image</Typography>
+                  <Typography style={{ fontSize: '18px' ,fontFamily: 'GFS Didot'}}>Upload Image </Typography>
                 </Grid>
                 <Grid item xs={6}>
                   <input type="file"/>
                 </Grid>
                 
                 <Grid item xs={12}>
-                  <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
+                  <Button type="submit" variant="contained" color="primary" fullWidth style={{ fontSize: '18px' ,fontFamily: 'GFS Didot'}}>Submit</Button>
                 </Grid>
 
               </Grid>
