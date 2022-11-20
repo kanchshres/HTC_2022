@@ -5,7 +5,6 @@ class User(BaseModel):
     username: str
     email: str
     password: str
-    home_address: str
 
 class Item(BaseModel):
     title: str

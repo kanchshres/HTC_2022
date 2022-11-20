@@ -5,9 +5,10 @@ import motor.motor_asyncio
 # mongodb://localhost:27017/
 # mongodb+srv://Cluster05731:pr1i8b82CM4z0qZI@cluster05731.0zu5f2j.mongodb.net/test
 client = motor.motor_asyncio.AsyncIOMotorClient('mongodb://localhost:27017/')
+
+# User DB
 user_db = client.UserList
 user_collection = user_db.user
-# User DB
 async def fetch_one_user(username):
     document = await user_collection.find_one({"username":username})
     return document
@@ -22,11 +23,12 @@ async def fetch_all_users():
 async def create_user(user):
     document = user
     result = await user_collection.insert_one(document)
-    return result
+    return document
 
-# need to fix line 28
 async def update_user(username, email, password, home_address):
-    await user_collection.update_one({"username": username}, {"$set": {"email":email}})
+    await user_collection.update_one({"username": username}, {"$set": {
+        "email":email}}, {"$set":{"password":password}}, {"$set":
+        {"home_address":home_address}})
     document = await user_collection.find_one({"username":username})
     return document
 
@@ -34,9 +36,9 @@ async def remove_user(username):
     await user_collection.delete_one({"username":username})
     return True
 
-item_db = client.ItemList
-item_collection = item_db.user
 # Items DB
+item_db = client.ItemList
+item_collection = item_db.item
 async def fetch_one_item(title):
     document = await item_collection.find_one({"title":title})
     return document
@@ -51,7 +53,7 @@ async def fetch_all_items():
 async def create_item(title):
     document = title
     result = await item_collection.insert_one(document)
-    return result
+    return document
 
 async def update_item(title, description, value, category):
     await item_collection.update_one({"title": title}, {"$set": 
