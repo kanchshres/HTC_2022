@@ -1,34 +1,33 @@
+from backend.model import User
+# MongoDB driver
 import motor.motor_asyncio
-from model import Todo
 
 client = motor.motor_asyncio.AsyncIOMotorClient('mongodb://localhost:27017/')
 
-database = client.TodoList
-collection = database.todo
+database = client.UserList
+collection = database.user
 
-async def fetch_one_todo(title):
-    document = await collection.find_one({"title":title})
+async def fetch_one_user(username):
+    document = await collection.find_one({"username":username})
     return document
 
-async def fetch_all_todos():
-    todos = []
+async def fetch_all_users():
+    users = []
     cursor = collection.find({})
     async for document in cursor:
-        todos.append(Todo(**document))
-    return todos
+        users.append(User(**document))
+    return users
 
-async def create_todo(todo):
-    document = todo
+async def create_user(user):
+    document = user
     result = await collection.insert_one(document)
+    return result
+
+async def update_user(username, email, password, home_address):
+    await collection.update_one({"username": username}, {"$set": {"email":email}})
+    document = await collection.find_one({"username":username})
     return document
 
-async def update_todo(title, desc):
-    await collection.update_one({"title": title}, {"$set": {
-        "description":desc
-    }})
-    document = await collection.find_one({"title":title})
-    return document
-
-async def remove_todo(title):
-    await collection.delete_one({"title":title})
+async def remove_user(username):
+    await collection.delete_one({"username":username})
     return True

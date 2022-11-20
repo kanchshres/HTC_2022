@@ -1,13 +1,13 @@
 from fastapi import FastAPI, HTTPException
 
-from model import Todo
+from backend.model import User
 
-from database import (
-    fetch_one_todo,
-    fetch_all_todos,
-    create_todo,
-    update_todo,
-    remove_todo,
+from backend.database import (
+    fetch_one_user,
+    fetch_all_users,
+    create_user,
+    update_user,
+    remove_user,
 )
 
 # an HTTP-specific exception class  to generate exception information
@@ -34,35 +34,35 @@ app.add_middleware(
 async def read_root():
     return {"Hello": "World"}
 
-@app.get("/api/todo")
-async def get_todo():
-    response = await fetch_all_todos()
+@app.get("/api/user")
+async def get_user():
+    response = await fetch_all_users()
     return response
 
-@app.get("/api/todo/{title}", response_model=Todo)
-async def get_todo_by_title(title):
-    response = await fetch_one_todo(title)
+@app.get("/api/user/{username}", response_model=User)
+async def get_user_by_username(username):
+    response = await fetch_one_user(username)
     if response:
         return response
-    raise HTTPException(404, f"There is no todo with the title {title}")
+    raise HTTPException(404, f"There is no user with the username {username}")
 
-@app.post("/api/todo/", response_model=Todo)
-async def post_todo(todo: Todo):
-    response = await create_todo(todo.dict())
+@app.post("/api/user", response_model=User)
+async def post_user(user: User):
+    response = await create_user(user.dict())
     if response:
         return response
     raise HTTPException(400, "Something went wrong")
 
-@app.put("/api/todo/{title}/", response_model=Todo)
-async def put_todo(title: str, desc: str):
-    response = await update_todo(title, desc)
+@app.put("/api/user/{username}/", response_model=User)
+async def put_user(username: str, email: str, password: str, home_address: str):
+    response = await update_user(username, email, password, home_address)
     if response:
         return response
-    raise HTTPException(404, f"There is no todo with the title {title}")
+    raise HTTPException(404, f"There is no user with the username {username}")
 
-@app.delete("/api/todo/{title}")
-async def delete_todo(title):
-    response = await remove_todo(title)
+@app.delete("/api/user/{username}")
+async def delete_user(username):
+    response = await remove_user(username)
     if response:
-        return "Successfully deleted todo"
-    raise HTTPException(404, f"There is no todo with the title {title}")
+        return "Successfully deleted user"
+    raise HTTPException(404, f"There is no user with the username {username}")
