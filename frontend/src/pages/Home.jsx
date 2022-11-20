@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
+import HeroSection from './video';
+import "./Home.css";
 
 const HomePage = () => {
   return (
-    <div>
-        <p>Here is our Home Page</p>
-    </div>
+    <HeroSection />
   )
 }
 
