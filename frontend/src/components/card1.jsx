@@ -1,13 +1,12 @@
 import React from 'react'
+import blazer from "../assets/blazer.png";
 import {Box, Card, CardContent, Typography, CardActions, Button, CardMedia} from '@mui/material';
 import {Link} from "react-router-dom";
-import blazer from "../assets/blazer.png";
 
 
 
 
-
-const Product = () => {
+const card1 = () => {
   return (
     <Box width='15%' style={{paddingLeft: 20, paddingBottom: 30}}>
       <Card>
@@ -47,4 +46,4 @@ const Product = () => {
       
 }
 
-export default Product;
+export default card1;

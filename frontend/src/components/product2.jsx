@@ -1,20 +1,19 @@
 import React from 'react'
+import blouse from "../assets/blouse.png";
 import {Box, Card, CardContent, Typography, CardActions, Button, CardMedia} from '@mui/material';
 import {Link} from "react-router-dom";
-import blazer from "../assets/blazer.png";
 
 
 
 
-
-const Product = () => {
+const product2 = () => {
   return (
     <Box width='15%' style={{paddingLeft: 20, paddingBottom: 30}}>
       <Card>
       <CardMedia
         component='img'
         height='200px'
-        image = {blazer}
+        image = {blouse}
 
       />
         <CardContent>
@@ -47,4 +46,4 @@ const Product = () => {
       
 }
 
-export default Product;
+export default product2;
