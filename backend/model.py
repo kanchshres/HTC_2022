@@ -1,6 +1,13 @@
 # Pydantic allows auto creation of JSON Schemas from models
 from pydantic import BaseModel
 
-class Todo(BaseModel):
+class User(BaseModel):
+    username: str
+    email: str
+    password: str
+
+class Item(BaseModel):
     title: str
     description: str
+    val: str
+    category: str

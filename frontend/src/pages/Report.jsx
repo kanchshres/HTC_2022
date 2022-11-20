@@ -29,16 +29,13 @@ const Report = () => {
       target="_blank"
     >
       <div className="Header_Class">
-      <h2>Contact Us</h2>
+      <h2>Report an Item</h2>
       </div>
       <div className="header_info">
-     <h3>Having trouble with something? Complete the form below to get in touch with us.</h3>
+     <h3>Having trouble with something? Dirty Clothing? Inappropriate Listings? </h3>
       </div>
       <div className="Name_Class">
         <div className="Full_name">
-        <subtitle>
-          Full Name
-        </subtitle>
         </div>
         <input
           type="text"
@@ -50,9 +47,6 @@ const Report = () => {
       </div>
       <div className="Email_Class">
       <div className="email_written">
-        <subtitle>
-          Email Address
-        </subtitle>
         </div>
         <input
           type="email"
@@ -63,11 +57,6 @@ const Report = () => {
         />
       </div>
       <div className="message">
-      <div className="help_written">
-        <subtitle>
-          What do you need help with?
-        </subtitle>
-        </div>
         <textarea
           placeholder="Your message"
           name="message"

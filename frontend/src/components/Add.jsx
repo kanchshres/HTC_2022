@@ -33,7 +33,7 @@ const Add = () => {
 
     return(
     <div className="add"> 
-      <Typography gutterBottom variant="h4" align="center">
+      <Typography gutterBottom variant="h4" align="center" >
         Submit your article of clothing!     
     </Typography>
       <Grid>
@@ -43,7 +43,7 @@ const Add = () => {
             <form>
               <Grid container spacing={1}>
                 <Grid xs={12}  item>
-                  <TextField placeholder="Clothing Item" label="Name of Clothing Item" variant="outlined" fullWidth required
+                  <TextField placeholder="Clothing Item" style={{ fontSize: '18px' ,fontFamily: 'GFS Didot'}} label="Name of Clothing Item" variant="outlined" fullWidth required
                   onChange={(e) => {
                     setForm({...form, nameCloth: e.target.value});
                   }}
