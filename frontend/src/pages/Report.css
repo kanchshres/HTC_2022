@@ -7,7 +7,7 @@ height: 20px;
   
     /* Heading 2 <h2> */
   
-font-family: 'GFS Didot';
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 29px;
@@ -35,8 +35,8 @@ flex-grow: 0;
   
     /* Heading 2 <h2> */
   
-    font-family: 'GFS Didot';
-    font-style: normal;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 30px;
@@ -66,7 +66,7 @@ flex-grow: 0;
     margin-top: 13vh;
     margin-left: 3.5vw;
 
-    font-family: 'GFS Didot';
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     font-size: 16px;
     color: #FFFFFF;
@@ -76,12 +76,12 @@ flex-grow: 0;
     position: relative;
     align-items: center;
 
-    font-family: 'GFS Didot';
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-radius: 10px;
     padding: 10px;
     padding-block: 1em;
     margin: 16px;
-    margin-left: 1.4vw;
+    margin-left: 1.5vw;
     /* margin-right: 23px; */
   
     /* font-weight: bold; */
@@ -95,14 +95,14 @@ flex-grow: 0;
   .Full_name{
     margin-left: -11.9vw;
     color: #4D4D4D;
-    font-family: 'GFS Didot';
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
   }
   
   .email_written{
     margin-left: -10.4vw;
     color: #4D4D4D;
-    font-family: 'GFS Didot';
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
   
   }
@@ -110,7 +110,7 @@ flex-grow: 0;
   .help_written{
     margin-left: -3.9vw;
     color: #4D4D4D;
-    font-family: 'GFS Didot';
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
   
   }
@@ -124,7 +124,7 @@ flex-grow: 0;
     margin-top: 2vh;
     margin-left: 1.33vw;
     margin-bottom: 60px;
-    font-family: 'GFS Didot';
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
   
     /* font-weight: bold; */
@@ -149,7 +149,7 @@ flex-grow: 0;
   
     /* font-weight: bold; */
     font-size: 16px;
-    font-family: 'GFS Didot';
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
     color: #0f0f0f;
   }
