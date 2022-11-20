@@ -1,6 +1,7 @@
 import React from 'react'
 import blazer from "../assets/blazer.png";
 import {Box, Card, CardContent, Typography, CardActions, Button, CardMedia} from '@mui/material';
+import {Link} from "react-router-dom";
 
 
 
@@ -26,7 +27,10 @@ const Product = () => {
         </CardContent>
         <CardActions>
           <Button size='small'>View More</Button>
-          <Button size='small'></Button>
+
+          <Link to ="/report" style={{ color: '#FFF', textDecoration: 'none' }}>
+                        <Button size="small">Report Product</Button>
+          </Link>
         </CardActions>
       </Card>
     </Box>

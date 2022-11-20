@@ -7,6 +7,7 @@ import View from '../pages/View';
 import LocationPage from '../pages/Location';
 import PostPage from '../pages/Post';
 import SignUp from '../pages/Signup';
+import Report from "../pages/Report";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/view" element={<View/>}/>
         <Route path="/post" element={<PostPage/>}/>
         <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/report" element={<Report/>}/>
       </Routes>
     </Router>
   )
