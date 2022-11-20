@@ -1,25 +1,21 @@
 import React from 'react'
 import {Box, Card, CardContent, Typography, CardActions, Button, CardMedia} from '@mui/material';
 import {Link} from "react-router-dom";
-import blazer from "../assets/blazer.png";
 
 
-
-
-
-const Product = () => {
+const Product = (props) => {
   return (
-    <Box width='15%' style={{paddingLeft: 20, paddingBottom: 30}}>
+    <Box width='18%' style={{paddingLeft: 20, paddingBottom: 30}}>
       <Card>
       <CardMedia
         component='img'
         height='200px'
-        image = {blazer}
+        image = {props.picture}
 
       />
         <CardContent>
           <Typography gutterBottom variant='h5' component='div'>
-            Vintage Coat
+            {props.name}
           </Typography>
           <Typography variant='body2' color='text.secondary'>
 
@@ -27,7 +23,7 @@ const Product = () => {
 
             | 
 
-            Retail Price $30
+            Retail Price ${props.price}
           </Typography>
         </CardContent>
         <CardActions>
