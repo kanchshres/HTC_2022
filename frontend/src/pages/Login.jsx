@@ -26,7 +26,7 @@ export default function SignIn() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} >
       <Container component="main" maxWidth="xs" style={{marginTop: 200}}>
         <CssBaseline />
         <Box

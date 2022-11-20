@@ -25,10 +25,6 @@ const Add = () => {
         }
     }
 
-
-
-
-
     return(
     <div className="add"> 
       <Typography gutterBottom variant="h4" align="center">

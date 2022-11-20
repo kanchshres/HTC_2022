@@ -29,23 +29,16 @@ video{
     font-family: 'GFS Didot', sans-serif;
 }
 
-
 @media screen and (max-width: 960px) {
     .video-container > h1 {
+        color: #fff;
         font-size: 48px;
         margin-top: -100px;
     }
 
     .video-container > p {
+        color: #fff;
         font-size: 30px;
     }
 
-    .btn-mobile {
-        display: block;
-        text-decoration: none;
-    }
-
-    .btn {
-        width: 100%;
-    }
 }
