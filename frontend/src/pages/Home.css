@@ -1,3 +1,51 @@
-body {
-    background-color: rgb(221, 246, 221);
+video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.video-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(39, 41, 51, 0.1);
+    object-fit: contain;
+}
+
+.video-container > h1 {
+    color: #fff;
+    font-family: 'GFS Didot', sans-serif;
+    margin-top: -100px;
+}
+
+.video-container > p {
+    margin-top: -15px;
+    color: #fff;
+    font-family: 'GFS Didot', sans-serif;
+}
+
+
+@media screen and (max-width: 960px) {
+    .video-container > h1 {
+        font-size: 48px;
+        margin-top: -100px;
+    }
+
+    .video-container > p {
+        font-size: 30px;
+    }
+
+    .btn-mobile {
+        display: block;
+        text-decoration: none;
+    }
+
+    .btn {
+        width: 100%;
+    }
 }

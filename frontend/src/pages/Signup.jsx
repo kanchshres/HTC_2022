@@ -26,7 +26,7 @@ export default function SignUp() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="xs" style={{marginTop: 200}}>
         <CssBaseline />
         <Box
           sx={{
@@ -36,7 +36,7 @@ export default function SignUp() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: 'F' }}>
           </Avatar>
           <Typography component="h1" variant="h5">
             Sign up

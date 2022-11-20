@@ -27,7 +27,7 @@ export default function SignIn() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="xs" style={{marginTop: 200}}>
         <CssBaseline />
         <Box
           sx={{
@@ -37,10 +37,10 @@ export default function SignIn() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: "F" }}>
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            Let's get started
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
