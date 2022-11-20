@@ -11,6 +11,8 @@ const Add = () => {
         message: ""
     })
 
+    
+
     const submitButton = () => {
         var valid = true;
         if(isNaN(form.nameCloth) || isNaN(form.category) || isNaN(form.name) || isNaN(form.message)){
@@ -21,7 +23,7 @@ const Add = () => {
 
 
 
-            
+
         }
     }
 
@@ -78,9 +80,15 @@ const Add = () => {
                 <Grid item xs={6}>
                   <Typography>Upload Image</Typography>
                 </Grid>
-                <Grid item xs={6}>
-                  <input type="file"/>
-                </Grid>
+                    <Grid item xs={6}>
+                    <form method = "POST" action="/upload" enctype="mutlipart/form-data">
+                        <input type="file" name="image"/>
+                        <input type="submit"/>
+                    </form>
+                    
+                    </Grid>
+                
+                
                 
                 <Grid item xs={12}>
                   <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
