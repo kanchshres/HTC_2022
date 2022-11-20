@@ -1,5 +1,7 @@
 import React from 'react'
 import Product from '../components/Product'
+import axios from "axios";
+
 import "./View.css"
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
