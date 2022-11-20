@@ -6,7 +6,7 @@ import Paper from '@mui/material/Paper';
  import GridLayout from "react-grid-layout";
 const View = () => {
   return (
-    <div>
+    <div style={{marginTop: 120}}>
         <div className='show'>
             
             <Product/>
