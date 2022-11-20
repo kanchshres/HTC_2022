@@ -1,9 +1,10 @@
 import React from 'react'
+import Add from '../components/Add.jsx'
 
 const PostPage = () => {
   return (
     <div>
-        <p>Here is our posting page</p>
+        <Add />
     </div>
   )
 }
