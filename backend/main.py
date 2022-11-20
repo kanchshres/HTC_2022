@@ -22,7 +22,8 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 origins = [
-    "http://localhost:3000",
+    "http://localhost:3000"
+    #"http://127.0.0.1:8000/",
 ]
 
 # what is a middleware? 
@@ -40,6 +41,7 @@ app.add_middleware(
 async def read_root():
     return {"YO": "Sup"}
 
+# User
 @app.get("/api/user")
 async def get_user():
     response = await fetch_all_users()
@@ -73,6 +75,8 @@ async def delete_user(username):
         return "Successfully deleted user"
     raise HTTPException(404, f"There is no user with the username {username}")
 
+
+# Items
 @app.get("/api/item")
 async def get_item():
     response = await fetch_all_items()
@@ -87,6 +91,7 @@ async def get_item_by_title(title):
 
 @app.post("/api/item", response_model=Item)
 async def post_item(item: Item):
+    print("YO Sup")
     response = await create_item(item.dict())
     if response:
         return response

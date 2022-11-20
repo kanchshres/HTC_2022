@@ -9,5 +9,6 @@ class User(BaseModel):
 class Item(BaseModel):
     title: str
     description: str
-    val: str
+    value: str
     category: str
+    owner: str
