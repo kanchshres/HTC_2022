@@ -6,4 +6,9 @@ class User(BaseModel):
     email: str
     password: str
     home_address: str
-    listings: list[int]
+
+class Item(BaseModel):
+    title: str
+    description: str
+    val: str
+    category: str

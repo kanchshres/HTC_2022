@@ -1,34 +1,65 @@
 from backend.model import User
+from backend.model import Item
 # MongoDB driver
 import motor.motor_asyncio
-
+# mongodb://localhost:27017/
+# mongodb+srv://Cluster05731:pr1i8b82CM4z0qZI@cluster05731.0zu5f2j.mongodb.net/test
 client = motor.motor_asyncio.AsyncIOMotorClient('mongodb://localhost:27017/')
-
-database = client.UserList
-collection = database.user
-
+user_db = client.UserList
+user_collection = user_db.user
+# User DB
 async def fetch_one_user(username):
-    document = await collection.find_one({"username":username})
+    document = await user_collection.find_one({"username":username})
     return document
 
 async def fetch_all_users():
     users = []
-    cursor = collection.find({})
+    cursor = user_collection.find({})
     async for document in cursor:
         users.append(User(**document))
     return users
 
 async def create_user(user):
     document = user
-    result = await collection.insert_one(document)
+    result = await user_collection.insert_one(document)
     return result
 
 # need to fix line 28
 async def update_user(username, email, password, home_address):
-    await collection.update_one({"username": username}, {"$set": {"email":email}})
-    document = await collection.find_one({"username":username})
+    await user_collection.update_one({"username": username}, {"$set": {"email":email}})
+    document = await user_collection.find_one({"username":username})
     return document
 
 async def remove_user(username):
-    await collection.delete_one({"username":username})
+    await user_collection.delete_one({"username":username})
+    return True
+
+item_db = client.ItemList
+item_collection = item_db.user
+# Items DB
+async def fetch_one_item(title):
+    document = await item_collection.find_one({"title":title})
+    return document
+
+async def fetch_all_items():
+    items = []
+    cursor = item_collection.find({})
+    async for document in cursor:
+        items.append(Item(**document))
+    return items
+
+async def create_item(title):
+    document = title
+    result = await item_collection.insert_one(document)
+    return result
+
+async def update_item(title, description, value, category):
+    await item_collection.update_one({"title": title}, {"$set": 
+    {"description":description}}, {"$set": {"value":value}},{"$set":
+    {"category":category}} )
+    document = await item_collection.find_one({"title":title})
+    return document
+
+async def remove_item(title):
+    await item_collection.delete_one({"title":title})
     return True
