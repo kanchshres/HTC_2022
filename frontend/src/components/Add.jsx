@@ -1,35 +1,51 @@
-import React from 'react'
+import { useState, useEffect } from "react";
 import {Box, Card, CardContent, Typography, CardActions, Button, CardMedia, Grid, TextField} from '@mui/material';
 import "./Add.css";
-import { useState } from "react";
 
-const Add = () => {
+const Add = ({handleItem, id, setErrorMessage}) => {
     const [form, setForm] = useState({
-        nameCloth: "",
+        title: "",
+        description: "",
+        value: "",
         category: "",
-        name: "",
-        message: ""
+        owner: ""
     })
 
-    
+    const cleanFormData = () => {
+      setForm({
+        title: "",
+        description: "",
+        value: "",
+        category: "",
+        owner: ""
+      })
+    };
 
-    const submitButton = () => {
-        var valid = true;
-        if(isNaN(form.nameCloth) || isNaN(form.category) || isNaN(form.name) || isNaN(form.message)){
-            valid = false;
-        }
-
-        if (valid == true){
-
-
-
-
-        }
-    }
-
-
-
-
+    const handleCreateItem = async (e) => {
+      console.log(form)
+      e.preventDefault();
+      const requestOptions = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: form.title,
+          description: form.description,
+          value: form.value,
+          email: form.email,
+          note: form.note,
+        }),
+      };
+      const response = await fetch("/api/items", requestOptions);
+      console.log(response)
+      if (!response.ok) {
+        setErrorMessage("Something went wrong when creating item");
+      } else {
+        cleanFormData();
+        handleItem();
+      }
+    };
 
     return(
     <div className="add"> 
@@ -44,36 +60,47 @@ const Add = () => {
                 <Grid xs={12}  item>
                   <TextField placeholder="Clothing Item" style={{ fontSize: '18px' ,fontFamily: 'GFS Didot'}} label="Name of Clothing Item" variant="outlined" fullWidth required
                   onChange={(e) => {
-                    setForm({...form, nameCloth: e.target.value});
+                    setForm({...form, title: e.target.value});
+                  }}
+                  
+                  
+                   />
+                </Grid>
+
+                <Grid xs={12}  item>
+                  <TextField placeholder="Description" multiline rows={4} style={{ fontSize: '18px' ,fontFamily: 'GFS Didot'}} label="Description" variant="outlined" fullWidth required
+                  onChange={(e) => {
+                    setForm({...form, description: e.target.value});
                   }}
                   
                   
                    />
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField  placeholder="Value" label="Approximate Value" variant="outlined" fullWidth required 
+                  <TextField  placeholder="Value" label="Approximate Retail Value" variant="outlined" fullWidth required 
                     onChange={(e) => {
-                    setForm({...form, category: e.target.value});
+                    setForm({...form, value: e.target.value});
                   }}
 
 
                   />
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField  placeholder="Name" label="Name" variant="outlined" fullWidth required 
-
+                  <TextField label="Category" placeholder="Category" variant="outlined" fullWidth required 
                     onChange={(e) => {
-                    setForm({...form, category: e.name.value});
+                    setForm({...form, category: e.target.value});
                     }}
+
+
                   />
                 </Grid>
+                {/* BELOW is a placeholder, owner should be currently logged in user */}
                 <Grid item xs={12}>
-                  <TextField label="Message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required 
+                  <TextField  placeholder="Owner Username" label="Owner Username" variant="outlined" fullWidth required 
+
                     onChange={(e) => {
-                    setForm({...form, category: e.name.value});
+                    setForm({...form, owner: e.target.value});
                     }}
-
-
                   />
                 </Grid>
                 <Grid item xs={6}>
@@ -86,11 +113,8 @@ const Add = () => {
                     </form>
                     
                     </Grid>
-                
-                
-                
                 <Grid item xs={12}>
-                  <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
+                  <Button type="submit" variant="contained" onClick={handleCreateItem}  color="primary" fullWidth>Submit</Button>
                 </Grid>
 
               </Grid>

@@ -52,7 +52,9 @@ async def fetch_all_items():
 
 async def create_item(title):
     document = title
-    result = await item_collection.insert_one(document)
+    print("YO Sup")
+    await item_collection.insert_one(document)
+    print("YO")
     return document
 
 async def update_item(title, description, value, category):
