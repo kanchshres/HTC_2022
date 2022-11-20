@@ -1,50 +1,26 @@
 import { useState, useEffect } from "react";
 import {Box, Card, CardContent, Typography, CardActions, Button, CardMedia, Grid, TextField} from '@mui/material';
+import axios from "axios";
 import "./Add.css";
 
 const Add = ({handleItem, id, setErrorMessage}) => {
+
     const [form, setForm] = useState({
-        title: "",
-        description: "",
-        value: "",
-        category: "",
-        owner: ""
+      title: "",
+      description: "",
+      value: "",
+      category: "",
+      owner: ""
     })
 
-    const cleanFormData = () => {
-      setForm({
-        title: "",
-        description: "",
-        value: "",
-        category: "",
-        owner: ""
-      })
-    };
-
     const handleCreateItem = async (e) => {
-      console.log(form)
-      e.preventDefault();
-      const requestOptions = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title: form.title,
-          description: form.description,
-          value: form.value,
-          email: form.email,
-          note: form.note,
-        }),
-      };
-      const response = await fetch("/api/items", requestOptions);
-      console.log(response)
-      if (!response.ok) {
-        setErrorMessage("Something went wrong when creating item");
-      } else {
-        cleanFormData();
-        handleItem();
-      }
+      axios.post("http://localhost:5000/api/item",
+      {'title': form.title, 
+      'description': form.description, 
+      'value': form.value, 
+      'category': form.category, 
+      'owner': form.owner})
+      .then(res => console.log(res))
     };
 
     return(
