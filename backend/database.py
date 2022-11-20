@@ -1,10 +1,10 @@
-from backend.model import User
-from backend.model import Item
+from model import User
+from model import Item
 # MongoDB driver
 import motor.motor_asyncio
 # mongodb://localhost:27017/
 # mongodb+srv://Cluster05731:pr1i8b82CM4z0qZI@cluster05731.0zu5f2j.mongodb.net/test
-client = motor.motor_asyncio.AsyncIOMotorClient('mongodb://localhost:27017/')
+client = motor.motor_asyncio.AsyncIOMotorClient('mongodb+srv://Cluster05731:pr1i8b82CM4z0qZI@cluster05731.0zu5f2j.mongodb.net/test')
 
 # User DB
 user_db = client.UserList
@@ -52,9 +52,7 @@ async def fetch_all_items():
 
 async def create_item(title):
     document = title
-    print("YO Sup")
     await item_collection.insert_one(document)
-    print("YO")
     return document
 
 async def update_item(title, description, value, category):

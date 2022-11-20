@@ -1,9 +1,12 @@
 from fastapi import FastAPI, HTTPException
 
-from backend.model import User
-from backend.model import Item
+from model import User
+from model import Item
 
-from backend.database import (
+
+import uvicorn
+
+from database import (
     fetch_one_user,
     fetch_all_users,
     create_user,
@@ -37,15 +40,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-async def read_root():
-    return {"YO": "Sup"}
+# @app.get("/")
+# async def read_root():
+#     return {"YO": "Sup"}
 
-# User
-@app.get("/api/user")
-async def get_user():
-    response = await fetch_all_users()
-    return response
+# # User
+# @app.get("/api/user")
+# async def get_user():
+#     response = await fetch_all_users()
+#     return response
 
 @app.get("/api/user/{username}", response_model=User)
 async def get_user_by_username(username):
@@ -61,20 +64,19 @@ async def post_user(user: User):
         return response
     raise HTTPException(400, "Something went wrong")
 
-@app.put("/api/user/{username}/", response_model=User)
-async def put_user(username: str, email: str, password: str, home_address: str):
-    response = await update_user(username, email, password, home_address)
-    if response:
-        return response
-    raise HTTPException(404, f"There is no user with the username {username}")
+# @app.put("/api/user/{username}/", response_model=User)
+# async def put_user(username: str, email: str, password: str, home_address: str):
+#     response = await update_user(username, email, password, home_address)
+#     if response:
+#         return response
+#     raise HTTPException(404, f"There is no user with the username {username}")
 
-@app.delete("/api/user/{username}")
-async def delete_user(username):
-    response = await remove_user(username)
-    if response:
-        return "Successfully deleted user"
-    raise HTTPException(404, f"There is no user with the username {username}")
-
+# @app.delete("/api/user/{username}")
+# async def delete_user(username):
+#     response = await remove_user(username)
+#     if response:
+#         return "Successfully deleted user"
+#     raise HTTPException(404, f"There is no user with the username {username}")
 
 # Items
 @app.get("/api/item")
@@ -91,22 +93,24 @@ async def get_item_by_title(title):
 
 @app.post("/api/item", response_model=Item)
 async def post_item(item: Item):
-    print("YO Sup")
     response = await create_item(item.dict())
     if response:
         return response
     raise HTTPException(400, "Something went wrong")
 
-@app.put("/api/item/{title}/", response_model=Item)
-async def put_item(title: str, email: str, password: str, home_address: str):
-    response = await update_item(title, email, password, home_address)
-    if response:
-        return response
-    raise HTTPException(404, f"There is no item with the title {title}")
+# @app.put("/api/item/{title}/", response_model=Item)
+# async def put_item(title: str, email: str, password: str, home_address: str):
+#     response = await update_item(title, email, password, home_address)
+#     if response:
+#         return response
+#     raise HTTPException(404, f"There is no item with the title {title}")
 
-@app.delete("/api/item/{title}")
-async def delete_item(title):
-    response = await remove_item(title)
-    if response:
-        return "Successfully deleted item"
-    raise HTTPException(404, f"There is no item with the title {title}")
+# @app.delete("/api/item/{title}")
+# async def delete_item(title):
+#     response = await remove_item(title)
+#     if response:
+#         return "Successfully deleted item"
+#     raise HTTPException(404, f"There is no item with the title {title}")
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", port=5000, log_level="info")

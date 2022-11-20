@@ -11,4 +11,5 @@ class Item(BaseModel):
     description: str
     value: str
     category: str
+    photoID: str
     owner: str
