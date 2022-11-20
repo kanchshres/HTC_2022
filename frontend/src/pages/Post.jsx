@@ -3,7 +3,7 @@ import Add from '../components/Add.jsx'
 
 const PostPage = () => {
   return (
-    <div>
+    <div style={{marginTop: 120}}>
         <Add />
     </div>
   )
