@@ -14,11 +14,8 @@
     "google-maps-react": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
     "react-grid-layout": "^1.3.4",
     "react-router-dom": "^6.4.3",
-=======
->>>>>>> 635de40bf69b8aa65f3c9e6c0533a8434714ab09
     "react-scripts": "5.0.1",
     "typescript": "^4.9.3",
     "web-vitals": "^2.1.4"
