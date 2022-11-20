@@ -1,5 +1,4 @@
 import React from 'react';
-import HeroSection from './video';
 import "./Home.css";
 import video2 from '../assets/video2.mp4';
 
