@@ -23,6 +23,10 @@ const Product = () => {
           <Typography variant='body2' color='text.secondary'>
 
             Posted 2022/11/19
+
+            | 
+
+            Retail Price $30
           </Typography>
         </CardContent>
         <CardActions>
