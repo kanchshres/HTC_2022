@@ -23,10 +23,7 @@ const Header = () =>{
                         <Button style={{ fontSize: '18px' }} color='inherit'>Post</Button>
                     </Link>
                     <Link to ="/login" style={{ color: '#FFF' }}>
-                        <Button style={{ fontSize: '18px' }} color='inherit'>Login</Button>
-                    </Link>
-                    <Link to ="/signup" style={{ color: '#FFF' }}>
-                        <Button style={{ fontSize: '18px' }} color='inherit'>Signup</Button>
+                        <Button style={{ fontSize: '18px' }} color='inherit'>Get Started</Button>
                     </Link>
                 </Stack>
             </Toolbar>
