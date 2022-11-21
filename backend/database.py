@@ -2,9 +2,8 @@ from model import User
 from model import Item
 # MongoDB driver
 import motor.motor_asyncio
-# mongodb://localhost:27017/
-# mongodb+srv://Cluster05731:pr1i8b82CM4z0qZI@cluster05731.0zu5f2j.mongodb.net/test
-client = motor.motor_asyncio.AsyncIOMotorClient('mongodb+srv://Cluster05731:pr1i8b82CM4z0qZI@cluster05731.0zu5f2j.mongodb.net/test')
+password = "INSERT PASSWORD HERE"
+client = motor.motor_asyncio.AsyncIOMotorClient('mongodb+srv://Cluster05731:' + password + 'cluster05731.0zu5f2j.mongodb.net/test')
 
 # User DB
 user_db = client.UserList
